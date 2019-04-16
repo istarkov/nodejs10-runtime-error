@@ -1,0 +1,12 @@
+{
+  "name": "test-env",
+  "version": "1.0.0",
+  "description": "project to get env info from gcloud deploy",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "deploy": "gcloud beta functions deploy test-env --entry-point=app --region=europe-west1 --runtime=nodejs10 --trigger-http --project=realadvisor-v1-sites",
+    "deploy:8": "gcloud beta functions deploy test-env --entry-point=app --region=europe-west1 --runtime=nodejs8 --trigger-http --project=realadvisor-v1-sites",
+    "postinstall": "yarn --version > ./version.txt"
+  }
+}
